@@ -11,6 +11,16 @@ function App() {
   const [lastName, setLastName] = useState('');
   const [color, setColor] = useState('white');
   const [picture, setPicture] = useState();
+  const onButtonClick = () => {
+    const quiltBlocks = JSON.parse(localStorage.getItem('quiltBlocks')) || [];
+    quiltBlocks.push({
+      firstName,
+      lastName,
+      color,
+      picture,
+    });
+    localStorage.setItem('quiltBlocks', JSON.stringify(quiltBlocks));
+  }
   return (
     <div className="quilt-block-form">
       <h1>Fireside Quilt Maker</h1>
@@ -58,6 +68,9 @@ function App() {
         color={color}
         picture={picture}
       />
+    <button onClick={onButtonClick}>
+      Add Your Block to the Quilt
+    </button>
     </div>
   );
 }
