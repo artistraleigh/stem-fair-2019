@@ -26,9 +26,23 @@ label {
   width: 300px;
   height: 300px;
   border: 1px solid black;
+  text-align: center;
 }
 
 .quilt-block img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.quilt {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add {
+  font-size: 200px;
+}
+
+a {
+  text-decoration: none;
 }

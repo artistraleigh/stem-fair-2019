@@ -62,6 +62,7 @@ import QuiltBlock from '../QuiltBlock';
           </QuiltBlockOption>
         ))}
       </div>
+      <h2>Preview</h2>
       <QuiltBlock
         firstName={firstName}
         lastName={lastName}
