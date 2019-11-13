@@ -6,8 +6,9 @@ const Quilt = () => {
   const quiltBlocks = JSON.parse(localStorage.getItem('quiltBlocks'));
   return (
     <div className="quilt">
-      { quiltBlocks.map(block => (
+      { quiltBlocks && quiltBlocks.map((block, index) => (
         <QuiltBlock
+          key={`${block.firstName}${block.lastName}${index}`}
           firstName={block.firstName}
           lastName={block.lastName}
           color={block.color}
